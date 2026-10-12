@@ -1,0 +1,280 @@
+﻿{
+    "abalone-porridge":  {
+                             "width":  2000,
+                             "height":  1575,
+                             "widths":  [
+                                            640,
+                                            1280,
+                                            2000
+                                        ]
+                         },
+    "bukchon":  {
+                    "width":  2400,
+                    "height":  1351,
+                    "widths":  [
+                                   640,
+                                   1280,
+                                   2000
+                               ]
+                },
+    "cabin-window":  {
+                         "width":  2000,
+                         "height":  1500,
+                         "widths":  [
+                                        640,
+                                        1280,
+                                        2000
+                                    ]
+                     },
+    "cheonggyecheon":  {
+                           "width":  2000,
+                           "height":  3000,
+                           "widths":  [
+                                          640,
+                                          1280,
+                                          2000
+                                      ]
+                       },
+    "corridor":  {
+                     "width":  2400,
+                     "height":  3200,
+                     "widths":  [
+                                    640,
+                                    1280,
+                                    2000
+                                ]
+                 },
+    "exam-room":  {
+                      "width":  2400,
+                      "height":  3600,
+                      "widths":  [
+                                     640,
+                                     1280,
+                                     2000
+                                 ]
+                  },
+    "founder":  {
+                    "width":  1122,
+                    "height":  1402,
+                    "widths":  [
+                                   640,
+                                   1280
+                               ]
+                },
+    "hakone":  {
+                   "width":  2000,
+                   "height":  2501,
+                   "widths":  [
+                                  640,
+                                  1280,
+                                  2000
+                              ]
+               },
+    "los-angeles-night":  {
+                              "width":  2000,
+                              "height":  2826,
+                              "widths":  [
+                                             640,
+                                             1280,
+                                             2000
+                                         ]
+                          },
+    "meiji-jingu":  {
+                        "width":  2000,
+                        "height":  2667,
+                        "widths":  [
+                                       640,
+                                       1280,
+                                       2000
+                                   ]
+                    },
+    "omamori":  {
+                    "width":  2000,
+                    "height":  1333,
+                    "widths":  [
+                                   640,
+                                   1280,
+                                   2000
+                               ]
+                },
+    "porcelain-tea":  {
+                          "width":  2000,
+                          "height":  1410,
+                          "widths":  [
+                                         640,
+                                         1280,
+                                         2000
+                                     ]
+                      },
+    "rice-and-miso":  {
+                          "width":  2000,
+                          "height":  1333,
+                          "widths":  [
+                                         640,
+                                         1280,
+                                         2000
+                                     ]
+                      },
+    "secret-garden":  {
+                          "width":  2000,
+                          "height":  1333,
+                          "widths":  [
+                                         640,
+                                         1280,
+                                         2000
+                                     ]
+                      },
+    "seoul-dawn":  {
+                       "width":  2400,
+                       "height":  1352,
+                       "widths":  [
+                                      640,
+                                      1280,
+                                      2000
+                                  ]
+                   },
+    "seoul-dusk":  {
+                       "width":  2400,
+                       "height":  1428,
+                       "widths":  [
+                                      640,
+                                      1280,
+                                      2000
+                                  ]
+                   },
+    "seoul-night":  {
+                        "width":  2000,
+                        "height":  1125,
+                        "widths":  [
+                                       640,
+                                       1280,
+                                       2000
+                                   ]
+                    },
+    "shanghai-dawn":  {
+                          "width":  2400,
+                          "height":  1376,
+                          "widths":  [
+                                         640,
+                                         1280,
+                                         2000
+                                     ]
+                      },
+    "shanghai-day":  {
+                         "width":  2400,
+                         "height":  1350,
+                         "widths":  [
+                                        640,
+                                        1280,
+                                        2000
+                                    ]
+                     },
+    "shanghai-golden-hour":  {
+                                 "width":  2000,
+                                 "height":  1333,
+                                 "widths":  [
+                                                640,
+                                                1280,
+                                                2000
+                                            ]
+                             },
+    "shanghai-night":  {
+                           "width":  2000,
+                           "height":  1333,
+                           "widths":  [
+                                          640,
+                                          1280,
+                                          2000
+                                      ]
+                       },
+    "stars-above-clouds":  {
+                               "width":  2000,
+                               "height":  1272,
+                               "widths":  [
+                                              640,
+                                              1280,
+                                              2000
+                                          ]
+                           },
+    "suzhou-garden":  {
+                          "width":  2000,
+                          "height":  1333,
+                          "widths":  [
+                                         640,
+                                         1280,
+                                         2000
+                                     ]
+                      },
+    "tai-chi":  {
+                    "width":  2000,
+                    "height":  1303,
+                    "widths":  [
+                                   640,
+                                   1280,
+                                   2000
+                               ]
+                },
+    "tokyo-fuji-dusk":  {
+                            "width":  2400,
+                            "height":  1867,
+                            "widths":  [
+                                           640,
+                                           1280,
+                                           2000
+                                       ]
+                        },
+    "tokyo-night":  {
+                        "width":  2000,
+                        "height":  1500,
+                        "widths":  [
+                                       640,
+                                       1280,
+                                       2000
+                                   ]
+                    },
+    "tokyo-skyline":  {
+                          "width":  2000,
+                          "height":  1334,
+                          "widths":  [
+                                         640,
+                                         1280,
+                                         2000
+                                     ]
+                      },
+    "tokyo-street":  {
+                         "width":  2000,
+                         "height":  1333,
+                         "widths":  [
+                                        640,
+                                        1280,
+                                        2000
+                                    ]
+                     },
+    "wing-dawn":  {
+                      "width":  2400,
+                      "height":  3598,
+                      "widths":  [
+                                     640,
+                                     1280,
+                                     2000
+                                 ]
+                  },
+    "wing-dusk":  {
+                      "width":  2000,
+                      "height":  1333,
+                      "widths":  [
+                                     640,
+                                     1280,
+                                     2000
+                                 ]
+                  },
+    "xiaolongbao":  {
+                        "width":  2000,
+                        "height":  3000,
+                        "widths":  [
+                                       640,
+                                       1280,
+                                       2000
+                                   ]
+                    }
+}

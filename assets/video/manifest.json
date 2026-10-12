@@ -1,0 +1,26 @@
+{
+  "namsan-sunrise": {
+    "width": 1920,
+    "height": 1080,
+    "duration": 14.5,
+    "bytes": 1949390
+  },
+  "cheonggyecheon": {
+    "width": 1280,
+    "height": 720,
+    "duration": 8.42,
+    "bytes": 802172
+  },
+  "tokyo-rain": {
+    "width": 1600,
+    "height": 900,
+    "duration": 11.5,
+    "bytes": 2199981
+  },
+  "shanghai-bund": {
+    "width": 1600,
+    "height": 844,
+    "duration": 11.5,
+    "bytes": 635126
+  }
+}

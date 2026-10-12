@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eastandwell.com/sitemap.xml
