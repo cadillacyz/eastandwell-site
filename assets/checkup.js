@@ -212,7 +212,8 @@
     head.hidden = false;
     head.innerHTML = '<p class="eyebrow">' + esc(fill(RS.eyebrow, A.age, C.q.sex.opts[A.sex])) + '</p>'
       + '<h2 class="cg-headline">' + esc(line) + (due ? ' <em>' + esc(colonDue ? RS.colonDay : RS.morning) + '</em>' : '') + '</h2>'
-      + '<p class="cg-res-sub">' + esc(done < rs.length ? C.pending : RS.sub) + '</p>';
+      + '<p class="cg-res-sub">' + esc(done < rs.length ? C.pending : RS.sub) + '</p>'
+      + '<div class="cg-res-actions"><a class="btn" href="' + esc(root.getAttribute('data-plan')) + '">' + esc(RS.actions.plan) + '</a><p class="cg-plan-note">' + esc(C.foot.note) + '</p></div>';
   };
 
   var renderLabels = function () {

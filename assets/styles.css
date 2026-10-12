@@ -1330,9 +1330,9 @@ video.closing-photo, .hour-video { display: block; }
 .cg-summary-go:hover { background: rgba(243, 242, 238, .08); }
 .page-consult .site-footer { padding-bottom: 120px; }
 
-/* The last step: the brief, and signing up */
-.cg-plan .link-underline { font-size: 18px; }
-.cg-plan-note { margin: 6px 0 0; max-width: 480px; font-size: 15px; line-height: 1.5; color: var(--graphite); }
+/* Under the result: plan a checkup, print the brief, start again */
+.cg-plan { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; }
+.cg-plan-note { margin: 0; max-width: 420px; font-size: 15px; line-height: 1.5; color: var(--graphite); }
 
 /* The result */
 .cg-res-head { padding-top: clamp(40px, 5vw, 64px); padding-bottom: 28px; }
@@ -1434,7 +1434,7 @@ video.closing-photo, .hour-video { display: block; }
   .cg-sky-base { order: 1; margin: 0; padding: 0; border: 0; }
   .cg-tile { padding: 7px 10px; }
 }
-.cg-res-foot { padding-top: 36px; padding-bottom: 24px; margin-top: 40px; border-top: 1px solid var(--linen); }
+.cg-res-foot { padding-top: 32px; padding-bottom: 32px; margin-top: 32px; border-top: 1px solid var(--linen); border-bottom: 1px solid var(--linen); }
 
 /* "What happens to 1,000 people like you", inside a card */
 .facts { margin-top: 22px; padding: 18px 16px; background: #FBFAF7; border-top: 1px solid var(--ink); }
