@@ -253,7 +253,7 @@ button, input, select, textarea { font: inherit; }
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px 96px; }
 /* Grid children may shrink below their content (wide tables scroll inside their own box instead). */
 .split > *, .meal-grid > *, .day-after-grid > *,
-.ws-grid > *, .begin-grid > *, .newsletter-inner > *, .journal-head-grid > *, .article-grid > *, .card-grid > * { min-width: 0; }
+.ws-grid > *, .begin-grid > *, .journal-head-grid > *, .article-grid > *, .card-grid > * { min-width: 0; }
 .split-head .muted { max-width: 380px; margin: 22px 0 0; }
 .rule-top { border-top: 1px solid var(--ink); padding-top: 56px; }
 .narrow-title { max-width: 760px; margin-bottom: 56px; }
@@ -526,9 +526,6 @@ button, input, select, textarea { font: inherit; }
 
 /* Newsletter and forms ----------------------------------------------------- */
 
-.newsletter { border-top: 1px solid var(--linen); padding: clamp(80px, 8vw, 112px) 0; }
-.newsletter-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px 96px; align-items: end; }
-.newsletter-copy p:last-child { margin: 0; max-width: 480px; color: var(--muted); }
 .field-label { display: block; margin: 0 0 8px; font-size: 13.5px; font-weight: 500; color: var(--graphite); }
 input[type="email"], input[type="text"] {
   width: 100%; min-height: 54px; padding: 0 16px;
@@ -543,7 +540,6 @@ input[type="email"]:focus, input[type="text"]:focus { outline: 2px solid var(--a
 .form-status { margin: 10px 0 0; font-weight: 500; color: var(--accent); }
 .form-status:empty { display: none; }
 @media (max-width: 760px) {
-  .newsletter-inner { grid-template-columns: 1fr; }
   .inline-field { flex-direction: column; gap: 10px; }
 }
 
@@ -1202,7 +1198,7 @@ video.closing-photo, .hour-video { display: block; }
 /* Print ------------------------------------------------------------------------- */
 
 @media print {
-  .site-header, .site-footer, .newsletter, .toc, .toc-mobile, .cta-aside, .continue, .editor-badge, .closing, .nav-mobile { display: none !important; }
+  .site-header, .site-footer, .toc, .toc-mobile, .cta-aside, .continue, .editor-badge, .closing, .nav-mobile { display: none !important; }
   .article-grid { display: block; }
   body { background: #fff; }
 }

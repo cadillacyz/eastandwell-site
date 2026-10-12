@@ -149,13 +149,35 @@
     a.addEventListener('click', function () { a.closest('details').removeAttribute('open'); });
   });
 
-  // Forms: until a form service is connected, say so instead of sending anything.
+  // The Plan a checkup form: Web3Forms emails it to us. Without an access key it sends nothing and says so.
   $$('.signup-form').forEach(function (form) {
-    var action = form.getAttribute('data-action');
-    if (action) { form.action = action; return; }
+    var status = $('.form-status', form);
+    var button = $('button[type=submit]', form);
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      $('.form-status', form).textContent = form.getAttribute('data-soon');
+      var key = form.getAttribute('data-key');
+      if (!key) { status.textContent = form.getAttribute('data-soon'); return; }
+      var data = {};
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
+      if (data.botcheck) return;
+      delete data.botcheck;
+      data.access_key = key;
+      data.subject = form.getAttribute('data-subject') + (data.name ? ': ' + data.name : '');
+      data.from_name = 'East&Well website';
+      data.language = form.getAttribute('data-lang-name');
+      button.disabled = true;
+      status.textContent = form.getAttribute('data-sending');
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (r) { return r.json(); }).then(function (res) {
+        if (!res.success) throw new Error(res.message);
+        form.reset();
+        status.textContent = form.getAttribute('data-sent');
+      }).catch(function () {
+        status.textContent = form.getAttribute('data-failed');
+      }).then(function () { button.disabled = false; });
     });
   });
 
