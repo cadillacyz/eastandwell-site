@@ -451,7 +451,8 @@ button, input, select, textarea { font: inherit; }
 .home-scan-num { margin-right: .35em; font-family: var(--reading); font-size: 1.2em; font-weight: 400; color: #A9BDB0; }
 .home-scan-sub { display: block; margin-top: 2px; font-size: max(12.5px, 1.2cqw); line-height: 1.3; color: #A9B4AE; }
 .home-scan-fig figcaption { margin-top: 10px; text-align: center; font-size: 15px; color: #A9B4AE; }
-@media (max-width: 900px) { .home-guide-grid { grid-template-columns: 1fr; } }
+/* Below ~1180px the side-by-side figure gets too narrow for its labels (449px at 1024), so stack it under the text. */
+@media (max-width: 1180px) { .home-guide-grid { grid-template-columns: 1fr; } }
 /* On a phone the labels would crowd the figure: it shows the body alone, and the guide shows the rest. */
 @media (max-width: 640px) { .home-scan-head, .home-scan-label { display: none; } }
 
@@ -768,6 +769,8 @@ mark.ed { padding: 1px 6px; font-family: var(--sans); font-size: .78em; font-wei
 .begin-form { display: flex; flex-direction: column; padding: 40px; background: var(--stone); }
 .begin-form input[type="text"], .begin-form input[type="email"] { margin-bottom: 16px; }
 .begin-form fieldset { margin: 6px 0 14px; padding: 0; border: 0; }
+.begin-form select { margin-bottom: 16px; }
+.field-label .optional { color: var(--muted); font-weight: 400; }
 .choices { display: flex; flex-wrap: wrap; gap: 8px; }
 .choice { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--linen); background: var(--porcelain); cursor: pointer; font-size: 15px; }
 .choice input { accent-color: var(--ink); margin: 0; }

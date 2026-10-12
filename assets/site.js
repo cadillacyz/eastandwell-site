@@ -157,14 +157,23 @@
       e.preventDefault();
       var key = form.getAttribute('data-key');
       if (!key) { status.textContent = form.getAttribute('data-soon'); return; }
-      var data = {};
-      new FormData(form).forEach(function (v, k) { data[k] = v; });
-      if (data.botcheck) return;
-      delete data.botcheck;
-      data.access_key = key;
-      data.subject = form.getAttribute('data-subject') + (data.name ? ': ' + data.name : '');
-      data.from_name = 'East&Well website';
-      data.language = form.getAttribute('data-lang-name');
+      var fd = new FormData(form);
+      if (fd.get('botcheck')) return;
+      var name = fd.get('name') || '';
+      // The email arrives with these labels, in this order. name and email let Reply go to the visitor.
+      var data = {
+        access_key: key,
+        subject: form.getAttribute('data-subject') + (name ? ': ' + name : ''),
+        from_name: 'East&Well website',
+        'Form': 'Plan a checkup, eastandwell.com',
+        name: name,
+        email: fd.get('email'),
+        'City': fd.get('city'),
+        'Travel month': fd.get('travel_month'),
+        'State': fd.get('state') || 'Not given',
+        'Page language': form.getAttribute('data-lang-name'),
+        'Page': location.href.split('#')[0]
+      };
       button.disabled = true;
       status.textContent = form.getAttribute('data-sending');
       fetch('https://api.web3forms.com/submit', {
