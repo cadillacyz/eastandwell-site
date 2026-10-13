@@ -885,4 +885,186 @@
     }
   }
   })();
+
+  // Home: the price horizon (What it costs). Data comes from the figure's data-price-horizon attribute
+  // (src/data/price-horizon.mjs). The finished chart is drawn at once; the first time it comes into view it
+  // replays as a short animation (lines draw in, the sun rises, the big numbers count up). A watchdog snaps
+  // everything to its end state, so a paused animation can never leave it blank or half-counted.
+  (function () {
+    var fig = $('[data-price-horizon]');
+    if (!fig) return;
+    var cfg; try { cfg = JSON.parse(fig.getAttribute('data-price-horizon')); } catch (e) { return; }
+    var host = $('.ph-chart', fig), foot = $('.ph-foot', fig), toggle = $('.ph-toggle', fig);
+    var homeNum = $('#ph-home', fig), homeSub = $('#ph-home-sub', fig);
+    var NS = 'http://www.w3.org/2000/svg';
+    var usd = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+    var ids = cfg.rows.filter(function (r) { return r.id; }).map(function (r) { return r.id; });
+    var S = { homeV: cfg.core, sun: 1, count: 1, show: {}, prog: {} };
+    ids.forEach(function (id) { S.show[id] = 1; S.prog[id] = 1; });
+
+    var tweens = [], running = false;
+    var get = function (k, sub) { return sub ? S[k][sub] : S[k]; };
+    var set = function (k, sub, v) { if (sub) S[k][sub] = v; else S[k] = v; };
+    var tween = function (k, sub, to, ms, delay) {
+      if (reduce) { set(k, sub, to); return; }
+      tweens = tweens.filter(function (t) { return !(t.k === k && t.sub === sub); });
+      tweens.push({ k: k, sub: sub, from: get(k, sub), to: to, t0: performance.now() + (delay || 0), ms: ms });
+      if (!running) { running = true; requestAnimationFrame(step); }
+    };
+    var easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };
+    var step = function (now) {
+      tweens = tweens.filter(function (t) {
+        if (now < t.t0) return true;
+        var k = Math.min(1, (now - t.t0) / t.ms);
+        set(t.k, t.sub, t.from + (t.to - t.from) * easeOut(k));
+        return k < 1;
+      });
+      draw();
+      if (tweens.length) requestAnimationFrame(step); else running = false;
+    };
+    var watchdog;
+    var finishAll = function () { tweens.forEach(function (t) { set(t.k, t.sub, t.to); }); tweens = []; draw(); };
+    var guard = function (ms) { clearTimeout(watchdog); watchdog = setTimeout(finishAll, ms); };
+
+    // Layout: names beside the lines on a wide card, above them on a narrow one.
+    var L, svg;
+    var build = function () {
+      var compact = host.clientWidth < 440;
+      var W = compact ? 360 : 560, top = 30, rowH = compact ? 42 : 34;
+      L = { W: W, top: top, rowH: rowH, compact: compact, plotL: compact ? 10 : 150, plotR: W - (compact ? 88 : 78), rows: [] };
+      var y = top;
+      cfg.rows.forEach(function (r) { L.rows.push({ r: r, y: y }); y += r.group ? 22 : rowH; });
+      L.axisY = y + 6; L.H = y + 30;
+      svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('viewBox', '0 0 ' + W + ' ' + L.H);
+      svg.setAttribute('focusable', 'false');
+      svg.innerHTML = '<defs>' +
+        '<filter id="ph-glow" filterUnits="userSpaceOnUse" x="-40" y="-40" width="' + (W + 80) + '" height="' + (L.H + 80) + '"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
+        '<radialGradient id="ph-sun"><stop offset="0" stop-color="#FFE7B0"/><stop offset=".55" stop-color="#F2BE5C"/><stop offset="1" stop-color="#E3A43E"/></radialGradient>' +
+        '<radialGradient id="ph-halo"><stop offset="0" stop-color="#F2BE5C" stop-opacity=".42"/><stop offset=".45" stop-color="#F2BE5C" stop-opacity=".1"/><stop offset="1" stop-color="#F2BE5C" stop-opacity="0"/></radialGradient>' +
+        '<linearGradient id="ph-beam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#F2BE5C" stop-opacity=".55"/><stop offset="1" stop-color="#F2BE5C" stop-opacity="0"/></linearGradient>' +
+        '</defs><g class="ph-grid"></g><g class="ph-halo"></g><g class="ph-rows"></g><g class="ph-sunwrap"></g>';
+      var rowsG = svg.querySelector('.ph-rows');
+      L.rows.forEach(function (o) {
+        var r = o.r, g = document.createElementNS(NS, 'g');
+        if (r.group) {
+          g.setAttribute('data-group', '1');
+          g.innerHTML = '<text class="ph-t-group" x="0" y="' + (o.y + 15) + '"></text>';
+          g.firstChild.textContent = r.group.toUpperCase();
+        } else {
+          var cy = compact ? o.y + 28 : o.y + rowH / 2;
+          g.setAttribute('data-id', r.id); g.setAttribute('data-cy', cy);
+          g.innerHTML = '<rect x="-8" y="' + o.y + '" width="' + (W + 16) + '" height="' + rowH + '" fill="transparent"/>' +
+            '<text class="ph-t-name" x="0" y="' + (compact ? o.y + 12 : cy + 4) + '"></text>' +
+            '<line class="ph-seg" y1="' + cy + '" y2="' + cy + '" stroke="#7FB09C" stroke-width="4.5" stroke-linecap="round" filter="url(#ph-glow)"/>' +
+            '<line class="ph-over" y1="' + cy + '" y2="' + cy + '" stroke="#F2BE5C" stroke-width="4.5" stroke-linecap="round" opacity="0"/>' +
+            '<circle class="ph-lo" cy="' + cy + '" r="5.5" fill="#7FB09C" stroke="#131C18" stroke-width="2"/>' +
+            '<circle class="ph-hi" cy="' + cy + '" r="4" fill="#131C18" stroke="#7FB09C" stroke-width="2"/>' +
+            '<path class="ph-arrow" fill="none" stroke="#7FB09C" stroke-width="2"/>' +
+            '<text class="ph-t-val ph-vlo" y="' + (cy + 4.5) + '"></text><text class="ph-t-val ph-vhi" y="' + (cy + 4.5) + '"></text>';
+          $('.ph-t-name', g).textContent = r.name;
+          bindTip(g, r);
+        }
+        rowsG.appendChild(g);
+      });
+      host.innerHTML = '';
+      host.appendChild(svg);
+    };
+    var x = function (v) { return L.plotL + (Math.min(v, cfg.max) / cfg.max) * (L.plotR - L.plotL); };
+
+    var hoverId = null;
+    var draw = function () {
+      var grid = '';
+      for (var v = 0; v <= cfg.max; v += 1000) {
+        grid += '<line x1="' + x(v) + '" x2="' + x(v) + '" y1="' + (L.top - 8) + '" y2="' + L.axisY + '" stroke="rgba(243,242,238,.12)"/>';
+        if (v % 2000 === 0) grid += '<text class="ph-t-axis" x="' + x(v) + '" y="' + (L.axisY + 18) + '" text-anchor="middle">' + (v === 0 ? '$0' : '$' + v / 1000 + 'k') + '</text>';
+      }
+      grid += '<line x1="' + L.plotL + '" x2="' + L.plotR + '" y1="' + L.axisY + '" y2="' + L.axisY + '" stroke="rgba(243,242,238,.28)"/>';
+      svg.querySelector('.ph-grid').innerHTML = grid;
+      var firstSeoul = ids[1];
+      $$('.ph-rows > g', svg).forEach(function (g, i) {
+        if (g.getAttribute('data-group')) { g.style.opacity = i === 0 ? S.show[ids[0]] : S.show[firstSeoul]; return; }
+        var id = g.getAttribute('data-id'), cy = +g.getAttribute('data-cy');
+        var r = cfg.rows.filter(function (q) { return q.id === id; })[0], p = S.prog[id];
+        g.style.opacity = S.show[id] * (hoverId && hoverId !== id ? 0.35 : 1);
+        var lo = x(r.lo), hiV = r.hi ? r.lo + (r.hi - r.lo) * p : r.lo, hi = x(hiV);
+        var seg = $('.ph-seg', g), over = $('.ph-over', g);
+        seg.setAttribute('x1', lo); seg.setAttribute('x2', hi); seg.style.display = r.hi ? '' : 'none';
+        if (r.hi && hiV > S.homeV) { over.setAttribute('x1', Math.max(lo, x(S.homeV))); over.setAttribute('x2', hi); over.setAttribute('opacity', 0.92 * S.sun); }
+        else over.setAttribute('opacity', 0);
+        $('.ph-lo', g).setAttribute('cx', lo);
+        var clipped = r.hi && r.hi > cfg.max && p > 0.99;
+        var hc = $('.ph-hi', g); hc.setAttribute('cx', hi); hc.style.display = r.hi && !clipped && p > 0.02 ? '' : 'none';
+        $('.ph-arrow', g).setAttribute('d', clipped ? 'M' + (hi - 2) + ',' + (cy - 5) + ' L' + (hi + 5) + ',' + cy + ' L' + (hi - 2) + ',' + (cy + 5) : '');
+        var lab = Math.max(0, Math.min(1, (p - 0.75) / 0.25));
+        var vlo = $('.ph-vlo', g), vhi = $('.ph-vhi', g);
+        if (r.hi) { vlo.textContent = L.compact ? '' : usd(r.lo); vlo.setAttribute('x', lo - 10); vlo.setAttribute('text-anchor', 'end'); vlo.style.opacity = lab; }
+        else { vlo.textContent = usd(r.lo); vlo.setAttribute('x', lo + 12); vlo.setAttribute('text-anchor', 'start'); vlo.style.opacity = S.show[id]; }
+        vhi.setAttribute('x', hi + (clipped ? 12 : 10)); vhi.textContent = r.hi ? usd(r.hi) : ''; vhi.style.opacity = lab;
+      });
+      var sx = x(S.homeV), sy = L.axisY;
+      svg.querySelector('.ph-halo').innerHTML = S.sun > 0 ? '<circle cx="' + sx + '" cy="' + sy + '" r="' + (110 * S.sun) + '" fill="url(#ph-halo)" opacity="' + S.sun + '"/><rect x="' + (sx - 1) + '" y="' + (L.top - 14) + '" width="2" height="' + (sy - L.top + 14) + '" fill="url(#ph-beam)" opacity="' + S.sun + '"/>' : '';
+      svg.querySelector('.ph-sunwrap').innerHTML = S.sun > 0 ? '<circle cx="' + sx + '" cy="' + sy + '" r="' + (11 * S.sun) + '" fill="url(#ph-sun)"/>' : '';
+      $$('.ph-num', fig).forEach(function (el) {
+        var to = el === homeNum ? S.homeV : +el.getAttribute('data-to');
+        var shown = usd(to * (el === homeNum && S.count >= 1 ? 1 : S.count));
+        var small = $('small', el);
+        if (small) { var after = el.lastChild === small; el.textContent = ''; if (!after) el.appendChild(small); el.appendChild(document.createTextNode(shown)); if (after) el.appendChild(small); }
+        else el.textContent = shown;
+      });
+    };
+
+    var tip = document.createElement('div');
+    tip.className = 'ph-tip'; tip.setAttribute('role', 'tooltip');
+    document.body.appendChild(tip);
+    function bindTip(g, r) {
+      g.addEventListener('pointermove', function (e) {
+        hoverId = r.id; draw();
+        tip.innerHTML = '<b></b><br><span></span>';
+        tip.firstChild.textContent = r.name; tip.lastChild.textContent = r.tip;
+        tip.style.opacity = 1;
+        tip.style.left = Math.min(e.clientX + 16, window.innerWidth - 296) + 'px';
+        tip.style.top = (e.clientY + 16) + 'px';
+      });
+      g.addEventListener('pointerleave', function () { hoverId = null; tip.style.opacity = 0; draw(); });
+    }
+
+    var pop = function (el) { el.classList.remove('ph-pop'); void el.offsetWidth; el.classList.add('ph-pop'); };
+    var play = function () {
+      if (reduce) return;
+      ids.forEach(function (id) { S.show[id] = 0; S.prog[id] = 0; });
+      S.sun = 0; S.count = 0; draw();
+      tween('count', null, 1, 1300, 0);
+      setTimeout(function () { $$('.ph-num', fig).forEach(pop); }, 1300);
+      tween('show', ids[0], 1, 400, 200);
+      ids.slice(1).forEach(function (id, i) { tween('show', id, 1, 350, 350 + i * 130); tween('prog', id, 1, 850, 420 + i * 130); });
+      tween('sun', null, 1, 800, 1250);
+      guard(2700);
+    };
+
+    toggle.addEventListener('click', function () {
+      var on = toggle.getAttribute('aria-pressed') !== 'true';
+      toggle.setAttribute('aria-pressed', on ? 'true' : 'false');
+      homeSub.textContent = cfg.homeSub[on ? 1 : 0];
+      tween('homeV', null, on ? cfg.colonoscopy : cfg.core, 900);
+      pop(homeNum);
+      guard(1200);
+    });
+
+    build(); draw();
+    fig.classList.add('ph-ready');
+    foot.hidden = false;
+    if ('IntersectionObserver' in window && !reduce) {
+      var seen = new IntersectionObserver(function (es) {
+        if (es[0].isIntersecting) { seen.disconnect(); play(); }
+      }, { threshold: 0.35 });
+      seen.observe(fig);
+    }
+    var lastCompact = L.compact, rz;
+    window.addEventListener('resize', function () {
+      clearTimeout(rz);
+      rz = setTimeout(function () { if ((host.clientWidth < 440) !== lastCompact) { build(); draw(); lastCompact = L.compact; } }, 150);
+    });
+    document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible' && tweens.length) finishAll(); });
+  })();
 })();

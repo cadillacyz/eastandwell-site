@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
-<link rel="stylesheet" href="./assets/styles.css?v=72569182">
+<link rel="stylesheet" href="./assets/styles.css?v=32118e1f">
 <script>document.documentElement.classList.add('js')</script>
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"selector_matches":"[target=_blank], [download], [rel~=nofollow]"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"East&Well","url":"https://eastandwell.com","description":"Thorough health checkups at accredited hospitals abroad, starting in Asia with Seoul, Tokyo and Shanghai: what each involves, what it costs, and how to plan one safely, with an English report and your scan files to bring home.","founder":{"@type":"Person","name":"Joe Yang"}}</script>
@@ -256,13 +256,45 @@
       <p class="home-mark"><span class="home-mark-sun" aria-hidden="true">05</span><span>What it costs</span></p>
       <h2 class="home-h home-h-s">Prices in plain sight.</h2>
       <p class="home-cost-text">Listed prices, as each provider publishes them. Packages differ and flights are extra. Sources and dates are in each guide.</p>
-      <table class="home-cost">
-        <tbody>
-            <tr><th scope="row"><a href="./guides/korea-health-checkup-foreigners/">Severance, Seoul</a><span class="home-cost-sub">University-hospital checkup packages</span><span class="home-cost-sub">Third-party guide, July 2026</span></th><td>from $610</td></tr>
-            <tr><th scope="row"><a href="./guides/china-hospital-international-departments/">Tongji Hospital, Shanghai</a><span class="home-cost-sub">Basic comprehensive checkup</span><span class="home-cost-sub">International department listing, 2026</span></th><td>$377</td></tr>
-            <tr><th scope="row"><span class="home-cost-at">At home, for reference</span><a href="./guides/us-executive-checkup-cost/">Cleveland Clinic, Ohio</a><span class="home-cost-sub">Executive checkup, core services (men)</span><span class="home-cost-sub">2024 self-pay schedule</span></th><td>$3,559</td></tr>
-        </tbody>
-      </table>
+      <figure class="ph" data-price-horizon="{&quot;max&quot;:7000,&quot;core&quot;:3559,&quot;colonoscopy&quot;:6629,&quot;homeSub&quot;:[&quot;Core executive checkup&quot;,&quot;Core checkup + colonoscopy&quot;],&quot;rows&quot;:[{&quot;group&quot;:&quot;Shanghai&quot;},{&quot;id&quot;:&quot;tongji&quot;,&quot;lo&quot;:377,&quot;hi&quot;:0,&quot;name&quot;:&quot;Tongji Hospital&quot;,&quot;tip&quot;:&quot;$377 · Basic checkup, international department · Bookimed listing, 2026&quot;},{&quot;group&quot;:&quot;Seoul&quot;},{&quot;id&quot;:&quot;hanshin&quot;,&quot;lo&quot;:530,&quot;hi&quot;:2300,&quot;name&quot;:&quot;Hanshin Medipia&quot;,&quot;tip&quot;:&quot;Listed packages $530 to $2,300 · Creatrip comparison, updated 9 Jul 2026&quot;},{&quot;id&quot;:&quot;severance&quot;,&quot;lo&quot;:610,&quot;hi&quot;:4520,&quot;name&quot;:&quot;Severance&quot;,&quot;tip&quot;:&quot;Listed packages $610 to $4,520 · Creatrip comparison, updated 9 Jul 2026&quot;},{&quot;id&quot;:&quot;snu&quot;,&quot;lo&quot;:980,&quot;hi&quot;:6500,&quot;name&quot;:&quot;Seoul National Univ.&quot;,&quot;tip&quot;:&quot;Listed packages $980 to $6,500 · Creatrip comparison, updated 9 Jul 2026&quot;},{&quot;id&quot;:&quot;samsung&quot;,&quot;lo&quot;:1520,&quot;hi&quot;:5390,&quot;name&quot;:&quot;Samsung Medical&quot;,&quot;tip&quot;:&quot;Listed packages $1,520 to $5,390 · Creatrip comparison, updated 9 Jul 2026&quot;},{&quot;id&quot;:&quot;asan&quot;,&quot;lo&quot;:1980,&quot;hi&quot;:15500,&quot;name&quot;:&quot;Asan Medical&quot;,&quot;tip&quot;:&quot;Listed packages $1,980 to $15,500 · Creatrip comparison, updated 9 Jul 2026&quot;}]}">
+        <div class="ph-stats">
+        <div class="ph-stat">
+          <span class="ph-stat-label"><i class="ph-dot" aria-hidden="true"></i>Shanghai</span>
+          <span class="ph-num" data-to="377">$377</span>
+          <span class="ph-stat-sub">Basic checkup</span>
+        </div>
+        <div class="ph-stat">
+          <span class="ph-stat-label"><i class="ph-dot" aria-hidden="true"></i>Seoul</span>
+          <span class="ph-num ph-num-from" data-to="530"><small>from</small>$530</span>
+          <span class="ph-stat-sub">Five checkup centers</span>
+        </div>
+        <div class="ph-stat">
+          <span class="ph-stat-label"><i class="ph-dot-home" aria-hidden="true"></i>At home</span>
+          <span class="ph-num ph-num-home" data-to="3559" id="ph-home">$3,559</span>
+          <span class="ph-stat-sub" id="ph-home-sub">Core executive checkup</span>
+        </div>
+        </div>
+        <div class="ph-chart" aria-hidden="true"></div>
+        <div class="ph-foot" hidden>
+          <button class="ph-toggle" type="button" aria-pressed="false"><span class="ph-switch" aria-hidden="true"></span>Add a colonoscopy at home</button>
+          <span class="ph-key" aria-hidden="true"><span><i class="ph-key-abroad"></i>Abroad</span><span><i class="ph-key-home"></i>Costs more than home</span></span>
+        </div>
+      </figure>
+      <div class="ph-table">
+        <table class="home-cost">
+          <caption class="sr-only">Listed checkup prices</caption>
+          <tbody>
+            <tr><th scope="row"><a href="./guides/china-hospital-international-departments/">Tongji Hospital</a><span class="home-cost-sub">Basic checkup, international department · Bookimed listing, 2026</span></th><td>$377</td></tr>
+            <tr><th scope="row"><a href="./guides/korea-health-checkup-foreigners/">Hanshin Medipia</a><span class="home-cost-sub">Creatrip comparison, updated 9 Jul 2026</span></th><td>$530–$2,300</td></tr>
+            <tr><th scope="row"><a href="./guides/korea-health-checkup-foreigners/">Severance</a><span class="home-cost-sub">Creatrip comparison, updated 9 Jul 2026</span></th><td>$610–$4,520</td></tr>
+            <tr><th scope="row"><a href="./guides/korea-health-checkup-foreigners/">Seoul National Univ.</a><span class="home-cost-sub">Creatrip comparison, updated 9 Jul 2026</span></th><td>$980–$6,500</td></tr>
+            <tr><th scope="row"><a href="./guides/korea-health-checkup-foreigners/">Samsung Medical</a><span class="home-cost-sub">Creatrip comparison, updated 9 Jul 2026</span></th><td>$1,520–$5,390</td></tr>
+            <tr><th scope="row"><a href="./guides/korea-health-checkup-foreigners/">Asan Medical</a><span class="home-cost-sub">Creatrip comparison, updated 9 Jul 2026</span></th><td>$1,980–$15,500</td></tr>
+            <tr><th scope="row"><span class="home-cost-at">At home, for reference</span><a href="./guides/us-executive-checkup-cost/">Cleveland Clinic, Ohio</a><span class="home-cost-sub">Core services (men) · 2024 self-pay schedule · colonoscopy +$3,070</span></th><td>$3,559</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="ph-links">What each package includes: <a href="./guides/korea-health-checkup-foreigners/">Seoul</a> · <a href="./guides/china-hospital-international-departments/">Shanghai</a> · <a href="./guides/us-executive-checkup-cost/">at home</a></p>
     </div>
     <div>
       <p class="home-mark"><span class="home-mark-sun" aria-hidden="true">06</span><span>Questions</span></p>
@@ -323,6 +355,6 @@
   </div>
 </footer>
 
-<script src="./assets/site.js?v=cc72728e" defer></script>
+<script src="./assets/site.js?v=773b2eef" defer></script>
 </body>
 </html>

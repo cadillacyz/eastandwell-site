@@ -493,6 +493,56 @@ button, input, select, textarea { font: inherit; }
 .home-cost-at { display: block; margin-bottom: 4px; font-size: 12px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--slate); }
 .home-cost-sub { display: block; margin-top: 3px; font-size: 14px; font-weight: 400; color: var(--slate); }
 .home-cost td { text-align: right; white-space: nowrap; font-family: var(--reading); font-size: 26px; font-weight: 500; line-height: 1; color: var(--deep); }
+
+/* Home: the price horizon (What it costs). A small window of night: big prices first, then each hospital's
+   listed packages as a glowing line on one scale, and the price at home as a sun on the horizon.
+   Drawn by assets/site.js; without it, the stats stay and the table below shows the same figures. */
+.ph { --ph-abroad: #7FB09C; --ph-home: #F2BE5C; --ph-mist: #A9B4AE; --ph-hair: rgba(243,242,238,.12);
+  margin: 0; padding: 26px 24px 18px; color: var(--porcelain);
+  background: radial-gradient(120% 90% at 60% 90%, #1B2822 0%, #131C18 50%, #0E1311 100%); }
+.ph-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.ph.ph-ready .ph-stats { padding-bottom: 20px; margin-bottom: 8px; border-bottom: 1px solid var(--ph-hair); }
+.ph-stat-label { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ph-mist); }
+.ph-dot, .ph-dot-home { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--ph-abroad); }
+.ph-dot-home { background: radial-gradient(circle, #FFE7B0, #F2BE5C 60%, #E3A43E); box-shadow: 0 0 10px rgba(242,190,92,.7); }
+.ph-num { display: block; margin-top: 6px; font: 400 clamp(36px, 3.4vw, 50px)/1 var(--display); color: var(--porcelain); font-variant-numeric: tabular-nums; transform-origin: left bottom; }
+.ph-num small { margin: 0 4px; font: 500 14px var(--sans); color: var(--ph-mist); }
+.ph-num-home { color: var(--ph-home); }
+.ph-stat-sub { display: block; margin-top: 6px; font-size: 12.5px; color: var(--ph-mist); }
+.ph-pop { animation: ph-pop .5s cubic-bezier(.2, 1.6, .4, 1); }
+@keyframes ph-pop { 0% { transform: scale(1); } 45% { transform: scale(1.08); } 100% { transform: scale(1); } }
+.ph-chart svg { display: block; width: 100%; height: auto; }
+.ph-chart text { font-family: var(--sans); }
+.ph-t-name { font-size: 13px; font-weight: 600; fill: var(--porcelain); }
+.ph-t-val { font-size: 13px; font-weight: 600; fill: var(--porcelain); font-variant-numeric: tabular-nums; }
+.ph-t-axis { font-size: 11px; fill: var(--ph-mist); }
+.ph-t-group { font-size: 10px; font-weight: 600; letter-spacing: .16em; fill: var(--ph-mist); }
+.ph-foot { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--ph-hair); }
+.ph-foot[hidden] { display: none; }
+.ph-toggle { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 14px 0 8px; border: 1px solid rgba(243,242,238,.26); border-radius: 999px; background: transparent; color: var(--porcelain); font: 500 14px var(--sans); cursor: pointer; }
+.ph-toggle:focus-visible { outline: 2px solid var(--ph-home); outline-offset: 3px; }
+.ph-switch { position: relative; flex: none; width: 34px; height: 20px; border-radius: 999px; background: rgba(243,242,238,.2); transition: background .3s; }
+.ph-switch::after { content: ''; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: var(--porcelain); transition: transform .3s; }
+.ph-toggle[aria-pressed="true"] .ph-switch { background: var(--ph-home); }
+.ph-toggle[aria-pressed="true"] .ph-switch::after { transform: translateX(14px); background: #0E1311; }
+.ph-key { display: flex; gap: 14px; font-size: 12px; color: var(--ph-mist); }
+.ph-key i { display: inline-block; width: 16px; height: 4px; margin-right: 6px; border-radius: 2px; vertical-align: middle; background: var(--ph-abroad); }
+.ph-key .ph-key-home { background: var(--ph-home); }
+.ph-table { margin-top: 18px; }
+.ph-ready + .ph-table { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+.ph-links { margin: 14px 0 0; font-size: 14.5px; line-height: 1.55; color: var(--slate); }
+.ph-links a { color: var(--graphite); text-underline-offset: 3px; }
+.ph-tip { position: fixed; z-index: 50; max-width: 280px; padding: 9px 11px; background: var(--porcelain); color: var(--ink); font-size: 13.5px; line-height: 1.45; box-shadow: 0 6px 24px rgba(0,0,0,.25); pointer-events: none; opacity: 0; transition: opacity .15s; }
+@media (max-width: 520px) {
+  .ph { padding: 20px 16px 16px; }
+  .ph-stats { gap: 10px; }
+  .ph-num { font-size: 30px; }
+  .ph-num small { display: block; margin: 0 0 2px; font-size: 11px; }
+  .lang-zh .ph-num small { display: inline; margin: 0 0 0 3px; }
+  .ph-stat-label { font-size: 10px; letter-spacing: .12em; }
+  .ph-stat-sub { font-size: 11.5px; }
+}
+@media (prefers-reduced-motion: reduce) { .ph-pop { animation: none; } }
 .home-faq { padding: 22px 0; border-top: 1px solid var(--linen); }
 .home-faq:last-child { border-bottom: 1px solid var(--linen); }
 .home-faq summary { list-style: none; display: flex; justify-content: space-between; gap: 24px; cursor: pointer; font-family: var(--reading); font-size: 22px; font-weight: 500; line-height: 1.35; color: var(--deep); }
