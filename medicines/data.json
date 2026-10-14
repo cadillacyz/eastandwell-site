@@ -1,0 +1,1023 @@
+{
+  "title": "East&Well medicine checker: rules for travellers to Japan, South Korea and mainland China",
+  "checked": "2026-10-14",
+  "note": "A plain summary of official rules. Not legal or medical advice; the border officer decides.",
+  "labels": {
+    "limit": "Within the limit",
+    "paper": "Paperwork before you fly",
+    "no": "Not allowed",
+    "check": "Check before you pack",
+    "nonum": "No set amount",
+    "unchecked": "Not checked yet"
+  },
+  "sources": {
+    "mhlwImport": {
+      "title": "Japan’s health ministry (MHLW): bringing medicines for personal use",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/kojinyunyu/topics/tp010401-1_00001.html"
+    },
+    "ncdGuide": {
+      "title": "Japan’s Narcotics Control Department: application guidance",
+      "url": "https://www.ncd.mhlw.go.jp/en/application2.html"
+    },
+    "ncdTable": {
+      "title": "Japan’s Narcotics Control Department: table of psychotropics (PDF)",
+      "url": "https://www.ncd.mhlw.go.jp/dl_data/keitai/total.pdf"
+    },
+    "ncdList": {
+      "title": "Japan’s Narcotics Control Department: controlled substances list (PDF, 12 Dec 2024)",
+      "url": "https://www.ncd.mhlw.go.jp/dl_data/keitai/cotrolled_substances_list20241212%20.pdf"
+    },
+    "mhlwThc": {
+      "title": "Japan’s health ministry: cannabis law changes and THC limits",
+      "url": "https://www.mhlw.go.jp/stf/newpage_43079.html"
+    },
+    "usEmbTokyo": {
+      "title": "US Embassy in Japan: bringing medicine into Japan",
+      "url": "https://jp.usembassy.gov/services/importing-medication/"
+    },
+    "krDecree": {
+      "title": "Korea’s Narcotics Control Act Enforcement Decree, appendices (law.go.kr)",
+      "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EB%A7%88%EC%95%BD%EB%A5%98%EA%B4%80%EB%A6%AC%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0%EC%8B%9C%ED%96%89%EB%A0%B9"
+    },
+    "mfdsGuide": {
+      "title": "Korea’s drug regulator (MFDS): guideline on permits for your own medicine",
+      "url": "https://www.mofa.go.kr/be-en/brd/m_7437/view.do?seq=761077"
+    },
+    "krNotice": {
+      "title": "Korean government notice: bringing medicines into Korea",
+      "url": "https://overseas.mofa.go.kr/us-atlanta-en/brd/m_4842/view.do?seq=761460"
+    },
+    "usEmbSeoul": {
+      "title": "US Embassy in Korea: controlled substances",
+      "url": "https://kr.usembassy.gov/services-controlled-substance/"
+    },
+    "kasi": {
+      "title": "Korea Astronomy and Space Science Institute: official calendar and public holidays",
+      "url": "https://astro.kasi.re.kr/kor/life/post/calendarData?year=2027"
+    },
+    "cnList": {
+      "title": "China’s 2025 lists of controlled medicines (NMPA announcement No. 55)",
+      "url": "https://www.nmpa.gov.cn/xxgk/ggtg/ypggtg/ypqtggtg/20250728092519123.html"
+    },
+    "cnFaq": {
+      "title": "Chongqing government: carrying medicines into China (29 Jun 2026)",
+      "url": "https://english.cq.gov.cn/services/entryandexit/FAQs/202606/t20260629_15782389.html"
+    },
+    "hkCbd": {
+      "title": "Hong Kong government: CBD is a dangerous drug",
+      "url": "https://www.info.gov.hk/gia/general/202307/07/P2023070700435p.htm"
+    }
+  },
+  "medicines": [
+    {
+      "id": "lorazepam",
+      "brand": "Ativan",
+      "generic": "lorazepam",
+      "chinese": "劳拉西泮",
+      "japanese": "ロラゼパム",
+      "korean": "로라제팜",
+      "page": "https://eastandwell.com/medicines/lorazepam/",
+      "pageZh": "https://eastandwell.com/zh/medicines/lorazepam/",
+      "japanLimitMg": 90,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Lorazepam is on Japan’s list of psychotropics. You can carry up to 90 mg in total for your own use with no paperwork.",
+          "whatToDo": "More than that: carry a certificate from your doctor naming the illness, why you need the medicine, and the medicines and amounts. More than a month’s supply: contact Japan’s health ministry (yakkan@mhlw.go.jp).",
+          "sources": [
+            "ncdGuide",
+            "ncdTable"
+          ]
+        },
+        "korea": {
+          "label": "Paperwork before you fly",
+          "rule": "Lorazepam is a controlled medicine in Korea (a psychotropic). You need a permit from Korea’s Ministry of Food and Drug Safety (MFDS) before you arrive.",
+          "whatToDo": "Submit the complete application at least 10 working days before you arrive (weekends and Korean public holidays don’t count): two application forms, a full passport copy, your flight booking, a letter from your doctor and your prescription. A permit covers up to 90 days; you can ask for up to 5 extra days’ doses in case of delays. Carry it in your hand luggage. Only the person who takes the medicine can get the permit.",
+          "sources": [
+            "mfdsGuide",
+            "krDecree",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China lists lorazepam as a Category II psychotropic. You may bring an amount that fits your prescription; there’s no set number.",
+          "whatToDo": "Carry your prescription or a diagnosis certificate from your doctor, and declare it to customs (the red channel).",
+          "sources": [
+            "cnList",
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "alprazolam",
+      "brand": "Xanax",
+      "generic": "alprazolam",
+      "chinese": "阿普唑仑",
+      "japanese": "アルプラゾラム",
+      "korean": "알프라졸람",
+      "page": "https://eastandwell.com/medicines/alprazolam/",
+      "pageZh": "https://eastandwell.com/zh/medicines/alprazolam/",
+      "japanLimitMg": 72,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Alprazolam is on Japan’s list of psychotropics. You can carry up to 72 mg in total for your own use with no paperwork.",
+          "whatToDo": "More than that: carry a certificate from your doctor naming the illness, why you need the medicine, and the medicines and amounts. More than a month’s supply: contact Japan’s health ministry (yakkan@mhlw.go.jp).",
+          "sources": [
+            "ncdGuide",
+            "ncdTable"
+          ]
+        },
+        "korea": {
+          "label": "Paperwork before you fly",
+          "rule": "Alprazolam is a controlled medicine in Korea (a psychotropic). You need a permit from Korea’s Ministry of Food and Drug Safety (MFDS) before you arrive.",
+          "whatToDo": "Submit the complete application at least 10 working days before you arrive (weekends and Korean public holidays don’t count): two application forms, a full passport copy, your flight booking, a letter from your doctor and your prescription. A permit covers up to 90 days; you can ask for up to 5 extra days’ doses in case of delays. Carry it in your hand luggage. Only the person who takes the medicine can get the permit.",
+          "sources": [
+            "mfdsGuide",
+            "krDecree",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China lists alprazolam as a Category II psychotropic. You may bring an amount that fits your prescription; there’s no set number.",
+          "whatToDo": "Carry your prescription or a diagnosis certificate from your doctor, and declare it to customs (the red channel).",
+          "sources": [
+            "cnList",
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "clonazepam",
+      "brand": "Klonopin",
+      "generic": "clonazepam",
+      "chinese": "氯硝西泮",
+      "japanese": "クロナゼパム",
+      "korean": "클로나제팜",
+      "page": "https://eastandwell.com/medicines/clonazepam/",
+      "pageZh": "https://eastandwell.com/zh/medicines/clonazepam/",
+      "japanLimitMg": 180,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Clonazepam is on Japan’s list of psychotropics. You can carry up to 180 mg in total for your own use with no paperwork.",
+          "whatToDo": "More than that: carry a certificate from your doctor naming the illness, why you need the medicine, and the medicines and amounts. More than a month’s supply: contact Japan’s health ministry (yakkan@mhlw.go.jp).",
+          "sources": [
+            "ncdGuide",
+            "ncdTable"
+          ]
+        },
+        "korea": {
+          "label": "Paperwork before you fly",
+          "rule": "Clonazepam is a controlled medicine in Korea (a psychotropic). You need a permit from Korea’s Ministry of Food and Drug Safety (MFDS) before you arrive.",
+          "whatToDo": "Submit the complete application at least 10 working days before you arrive (weekends and Korean public holidays don’t count): two application forms, a full passport copy, your flight booking, a letter from your doctor and your prescription. A permit covers up to 90 days; you can ask for up to 5 extra days’ doses in case of delays. Carry it in your hand luggage. Only the person who takes the medicine can get the permit.",
+          "sources": [
+            "mfdsGuide",
+            "krDecree",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China lists clonazepam as a Category II psychotropic. You may bring an amount that fits your prescription; there’s no set number.",
+          "whatToDo": "Carry your prescription or a diagnosis certificate from your doctor, and declare it to customs (the red channel).",
+          "sources": [
+            "cnList",
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "diazepam",
+      "brand": "Valium",
+      "generic": "diazepam",
+      "chinese": "地西泮",
+      "japanese": "ジアゼパム",
+      "korean": "디아제팜",
+      "page": "https://eastandwell.com/medicines/diazepam/",
+      "pageZh": "https://eastandwell.com/zh/medicines/diazepam/",
+      "japanLimitMg": 1200,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Diazepam is on Japan’s list of psychotropics. You can carry up to 1.2 g in total for your own use with no paperwork.",
+          "whatToDo": "More than that: carry a certificate from your doctor naming the illness, why you need the medicine, and the medicines and amounts. More than a month’s supply: contact Japan’s health ministry (yakkan@mhlw.go.jp).",
+          "sources": [
+            "ncdGuide",
+            "ncdTable"
+          ]
+        },
+        "korea": {
+          "label": "Paperwork before you fly",
+          "rule": "Diazepam is a controlled medicine in Korea (a psychotropic). You need a permit from Korea’s Ministry of Food and Drug Safety (MFDS) before you arrive.",
+          "whatToDo": "Submit the complete application at least 10 working days before you arrive (weekends and Korean public holidays don’t count): two application forms, a full passport copy, your flight booking, a letter from your doctor and your prescription. A permit covers up to 90 days; you can ask for up to 5 extra days’ doses in case of delays. Carry it in your hand luggage. Only the person who takes the medicine can get the permit.",
+          "sources": [
+            "mfdsGuide",
+            "krDecree",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China lists diazepam as a Category II psychotropic. You may bring an amount that fits your prescription; there’s no set number.",
+          "whatToDo": "Carry your prescription or a diagnosis certificate from your doctor, and declare it to customs (the red channel).",
+          "sources": [
+            "cnList",
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "zolpidem",
+      "brand": "Ambien",
+      "generic": "zolpidem",
+      "chinese": "唑吡坦",
+      "japanese": "ゾルピデム",
+      "korean": "졸피뎀",
+      "page": "https://eastandwell.com/medicines/zolpidem/",
+      "pageZh": "https://eastandwell.com/zh/medicines/zolpidem/",
+      "japanLimitMg": 300,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Zolpidem is on Japan’s list of psychotropics. You can carry up to 300 mg in total for your own use with no paperwork.",
+          "whatToDo": "More than that: carry a certificate from your doctor naming the illness, why you need the medicine, and the medicines and amounts. More than a month’s supply: contact Japan’s health ministry (yakkan@mhlw.go.jp).",
+          "sources": [
+            "ncdGuide",
+            "ncdTable"
+          ]
+        },
+        "korea": {
+          "label": "Paperwork before you fly",
+          "rule": "Zolpidem is a controlled medicine in Korea (a psychotropic). You need a permit from Korea’s Ministry of Food and Drug Safety (MFDS) before you arrive.",
+          "whatToDo": "Submit the complete application at least 10 working days before you arrive (weekends and Korean public holidays don’t count): two application forms, a full passport copy, your flight booking, a letter from your doctor and your prescription. A permit covers up to 90 days; you can ask for up to 5 extra days’ doses in case of delays. Carry it in your hand luggage. Only the person who takes the medicine can get the permit.",
+          "sources": [
+            "mfdsGuide",
+            "krDecree",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China lists zolpidem as a Category II psychotropic. You may bring an amount that fits your prescription; there’s no set number.",
+          "whatToDo": "Carry your prescription or a diagnosis certificate from your doctor, and declare it to customs (the red channel).",
+          "sources": [
+            "cnList",
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "methylphenidate",
+      "brand": "Ritalin, Concerta",
+      "generic": "methylphenidate",
+      "chinese": "哌甲酯",
+      "japanese": "メチルフェニデート",
+      "korean": "메틸페니데이트",
+      "page": "https://eastandwell.com/medicines/methylphenidate/",
+      "pageZh": "https://eastandwell.com/zh/medicines/methylphenidate/",
+      "japanLimitMg": 2160,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Methylphenidate is on Japan’s list of psychotropics. You can carry up to 2.16 g in total for your own use with no paperwork.",
+          "whatToDo": "More than that: carry a certificate from your doctor naming the illness, why you need the medicine, and the medicines and amounts. More than a month’s supply: contact Japan’s health ministry (yakkan@mhlw.go.jp).",
+          "sources": [
+            "ncdGuide",
+            "ncdTable"
+          ]
+        },
+        "korea": {
+          "label": "Paperwork before you fly",
+          "rule": "Methylphenidate is a controlled medicine in Korea (a psychotropic). You need a permit from Korea’s Ministry of Food and Drug Safety (MFDS) before you arrive.",
+          "whatToDo": "Submit the complete application at least 10 working days before you arrive (weekends and Korean public holidays don’t count): two application forms, a full passport copy, your flight booking, a letter from your doctor and your prescription. A permit covers up to 90 days; you can ask for up to 5 extra days’ doses in case of delays. Carry it in your hand luggage. Only the person who takes the medicine can get the permit.",
+          "sources": [
+            "mfdsGuide",
+            "krDecree",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "Paperwork before you fly",
+          "rule": "China lists methylphenidate as a Category I psychotropic. You may carry up to the most a single prescription allows, with a certificate of diagnosis from a medical institution and your passport.",
+          "whatToDo": "Get a certificate of diagnosis from your doctor before you go, and declare the medicine to customs (the red channel).",
+          "sources": [
+            "cnList",
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "amphetamine",
+      "brand": "Adderall",
+      "generic": "amphetamine salts",
+      "chinese": "混合苯丙胺盐",
+      "japanese": "アンフェタミン",
+      "korean": "암페타민",
+      "page": "https://eastandwell.com/medicines/amphetamine/",
+      "pageZh": "https://eastandwell.com/zh/medicines/amphetamine/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Not allowed",
+          "rule": "Amphetamine is prohibited in Japan, even with a prescription. Japan’s Narcotics Control Department answers “No” for Adderall.",
+          "whatToDo": "Leave it at home and ask your doctor about an alternative. Vyvanse can be brought with a permit.",
+          "sources": [
+            "ncdGuide"
+          ]
+        },
+        "korea": {
+          "label": "Paperwork before you fly",
+          "rule": "Amphetamine salts is a controlled medicine in Korea (a psychotropic). You need a permit from Korea’s Ministry of Food and Drug Safety (MFDS) before you arrive.",
+          "whatToDo": "Submit the complete application at least 10 working days before you arrive (weekends and Korean public holidays don’t count): two application forms, a full passport copy, your flight booking, a letter from your doctor and your prescription. A permit covers up to 90 days; you can ask for up to 5 extra days’ doses in case of delays. Carry it in your hand luggage. Only the person who takes the medicine can get the permit.",
+          "sources": [
+            "mfdsGuide",
+            "krDecree",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "Paperwork before you fly",
+          "rule": "China lists amphetamine salts as a Category I psychotropic. You may carry up to the most a single prescription allows, with a certificate of diagnosis from a medical institution and your passport.",
+          "whatToDo": "Get a certificate of diagnosis from your doctor before you go, and declare the medicine to customs (the red channel).",
+          "sources": [
+            "cnList",
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "lisdexamfetamine",
+      "brand": "Vyvanse",
+      "generic": "lisdexamfetamine",
+      "chinese": "赖右苯丙胺",
+      "japanese": "リスデキサンフェタミン",
+      "korean": "리스덱스암페타민",
+      "page": "https://eastandwell.com/medicines/lisdexamfetamine/",
+      "pageZh": "https://eastandwell.com/zh/medicines/lisdexamfetamine/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Paperwork before you fly",
+          "rule": "Lisdexamfetamine is a “stimulants’ raw material” in Japan: allowed only with permission from Japan’s Narcotics Control Department before you travel.",
+          "whatToDo": "Apply at least 14 days before you arrive, to the office for your arrival airport: the application form, a medical certificate from your doctor (issued within 3 months, with the specific reason) and photos of the packaging. Carry it yourself. Leaving Japan with leftovers needs an export form too.",
+          "sources": [
+            "ncdGuide",
+            "mhlwImport"
+          ]
+        },
+        "korea": {
+          "label": "Paperwork before you fly",
+          "rule": "Lisdexamfetamine is a controlled medicine in Korea (a psychotropic). You need a permit from Korea’s Ministry of Food and Drug Safety (MFDS) before you arrive.",
+          "whatToDo": "Submit the complete application at least 10 working days before you arrive (weekends and Korean public holidays don’t count): two application forms, a full passport copy, your flight booking, a letter from your doctor and your prescription. A permit covers up to 90 days; you can ask for up to 5 extra days’ doses in case of delays. Carry it in your hand luggage. Only the person who takes the medicine can get the permit.",
+          "sources": [
+            "mfdsGuide",
+            "krDecree",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "Not checked yet",
+          "rule": "Lisdexamfetamine isn’t on China’s 2025 lists of controlled medicines, and we haven’t found an official rule for travellers.",
+          "whatToDo": "Ask the Chinese embassy or consulate near you before you pack it.",
+          "sources": [
+            "cnList"
+          ]
+        }
+      }
+    },
+    {
+      "id": "codeine-tablets",
+      "brand": "Tylenol with codeine",
+      "generic": "acetaminophen and codeine",
+      "chinese": "对乙酰氨基酚与可待因",
+      "japanese": "コデイン配合剤",
+      "korean": "코데인 함유",
+      "page": "https://eastandwell.com/medicines/codeine-tablets/",
+      "pageZh": "https://eastandwell.com/zh/medicines/codeine-tablets/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Paperwork before you fly",
+          "rule": "Codeine is a narcotic in Japan. Products with 1% codeine or less are excluded; a tablet with 30 mg of codeine would have to weigh 3 g or more to be under that.",
+          "whatToDo": "Unless you can confirm your product has 1% codeine or less, apply to Japan’s Narcotics Control Department at least 14 days before you arrive, with a medical certificate and photos of the packaging.",
+          "sources": [
+            "ncdGuide",
+            "ncdList"
+          ]
+        },
+        "korea": {
+          "label": "Paperwork before you fly",
+          "rule": "Acetaminophen and codeine is a controlled medicine in Korea (a narcotic). You need a permit from Korea’s Ministry of Food and Drug Safety (MFDS) before you arrive.",
+          "whatToDo": "Submit the complete application at least 10 working days before you arrive (weekends and Korean public holidays don’t count): two application forms, a full passport copy, your flight booking, a letter from your doctor and your prescription. A permit covers up to 90 days; you can ask for up to 5 extra days’ doses in case of delays. Carry it in your hand luggage. Only the person who takes the medicine can get the permit.",
+          "sources": [
+            "mfdsGuide",
+            "krDecree",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "Paperwork before you fly",
+          "rule": "China lists acetaminophen and codeine as a narcotic drug. You may carry up to the most a single prescription allows, with a certificate of diagnosis from a medical institution and your passport.",
+          "whatToDo": "Get a certificate of diagnosis from your doctor before you go, and declare the medicine to customs (the red channel).",
+          "sources": [
+            "cnList",
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "oxycodone",
+      "brand": "OxyContin, Percocet",
+      "generic": "oxycodone",
+      "chinese": "羟考酮",
+      "japanese": "オキシコドン",
+      "korean": "옥시코돈",
+      "page": "https://eastandwell.com/medicines/oxycodone/",
+      "pageZh": "https://eastandwell.com/zh/medicines/oxycodone/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Paperwork before you fly",
+          "rule": "Oxycodone is a narcotic in Japan. You need permission from Japan’s Narcotics Control Department before you travel.",
+          "whatToDo": "Apply at least 14 days before you arrive, to the office for your arrival airport: the application form, a medical certificate from your doctor (issued within 3 months, with the specific reason) and photos of the packaging. Carry the medicine yourself and show the certificate at customs. Leaving Japan with leftovers needs an export form too.",
+          "sources": [
+            "ncdGuide",
+            "ncdList"
+          ]
+        },
+        "korea": {
+          "label": "Paperwork before you fly",
+          "rule": "Oxycodone is a controlled medicine in Korea (a narcotic). You need a permit from Korea’s Ministry of Food and Drug Safety (MFDS) before you arrive.",
+          "whatToDo": "Submit the complete application at least 10 working days before you arrive (weekends and Korean public holidays don’t count): two application forms, a full passport copy, your flight booking, a letter from your doctor and your prescription. A permit covers up to 90 days; you can ask for up to 5 extra days’ doses in case of delays. Carry it in your hand luggage. Only the person who takes the medicine can get the permit.",
+          "sources": [
+            "mfdsGuide",
+            "krDecree",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "Paperwork before you fly",
+          "rule": "China lists oxycodone as a narcotic drug. You may carry up to the most a single prescription allows, with a certificate of diagnosis from a medical institution and your passport.",
+          "whatToDo": "Get a certificate of diagnosis from your doctor before you go, and declare the medicine to customs (the red channel).",
+          "sources": [
+            "cnList",
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tramadol",
+      "brand": "Ultram",
+      "generic": "tramadol",
+      "chinese": "曲马多",
+      "japanese": "トラマドール",
+      "korean": "트라마돌",
+      "page": "https://eastandwell.com/medicines/tramadol/",
+      "pageZh": "https://eastandwell.com/zh/medicines/tramadol/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Prescription medicines: you can bring up to a one-month supply for your own use with no paperwork.",
+          "whatToDo": "More than a month’s supply needs an Import Confirmation (Yunyu Kakunin-sho, once called “Yakkan Shoumei”) before you leave home. The US Embassy suggests carrying a copy of your prescription.",
+          "sources": [
+            "mhlwImport",
+            "usEmbTokyo"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China lists tramadol as a Category II psychotropic. You may bring an amount that fits your prescription; there’s no set number.",
+          "whatToDo": "Carry your prescription or a diagnosis certificate from your doctor, and declare it to customs (the red channel).",
+          "sources": [
+            "cnList",
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "acetaminophen",
+      "brand": "Tylenol",
+      "generic": "acetaminophen",
+      "chinese": "对乙酰氨基酚",
+      "japanese": "アセトアミノフェン",
+      "korean": "아세트아미노펜",
+      "page": "https://eastandwell.com/medicines/acetaminophen/",
+      "pageZh": "https://eastandwell.com/zh/medicines/acetaminophen/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Non-prescription medicines: up to a two-month supply for your own use with no paperwork.",
+          "whatToDo": "More than two months’ supply needs an Import Confirmation before you leave home.",
+          "sources": [
+            "mhlwImport"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China allows medicines for your own use in a “reasonable quantity”, under customs supervision. There’s no set amount.",
+          "whatToDo": "Bring only what you need for the trip, with your prescription or medical record, and declare medicines to customs if asked.",
+          "sources": [
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "pseudoephedrine",
+      "brand": "Sudafed",
+      "generic": "pseudoephedrine",
+      "chinese": "伪麻黄碱",
+      "japanese": "プソイドエフェドリン",
+      "korean": "슈도에페드린",
+      "page": "https://eastandwell.com/medicines/pseudoephedrine/",
+      "pageZh": "https://eastandwell.com/zh/medicines/pseudoephedrine/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Check before you pack",
+          "rule": "Japan treats pseudoephedrine as a “stimulants’ raw material”. Products with 10% pseudoephedrine or less are excluded; above that you need permission before you travel. US labels don’t show the share.",
+          "whatToDo": "Ask your doctor or pharmacist for one without pseudoephedrine. Or ask Japan’s Narcotics Control Department about your exact product at least 14 days before you arrive.",
+          "sources": [
+            "ncdList",
+            "ncdGuide"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "Not checked yet",
+          "rule": "Pseudoephedrine isn’t on China’s 2025 lists of controlled medicines, and we haven’t found an official rule for travellers.",
+          "whatToDo": "Ask the Chinese embassy or consulate near you before you pack it.",
+          "sources": [
+            "cnList"
+          ]
+        }
+      }
+    },
+    {
+      "id": "loratadine",
+      "brand": "Claritin",
+      "generic": "loratadine",
+      "chinese": "氯雷他定",
+      "japanese": "ロラタジン",
+      "korean": "로라타딘",
+      "page": "https://eastandwell.com/medicines/loratadine/",
+      "pageZh": "https://eastandwell.com/zh/medicines/loratadine/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Non-prescription medicines: up to a two-month supply for your own use with no paperwork.",
+          "whatToDo": "More than two months’ supply needs an Import Confirmation before you leave home.",
+          "sources": [
+            "mhlwImport"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China allows medicines for your own use in a “reasonable quantity”, under customs supervision. There’s no set amount.",
+          "whatToDo": "Bring only what you need for the trip, with your prescription or medical record, and declare medicines to customs if asked.",
+          "sources": [
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "loratadine-d",
+      "brand": "Claritin-D",
+      "generic": "loratadine and pseudoephedrine",
+      "chinese": "氯雷他定与伪麻黄碱",
+      "japanese": "プソイドエフェドリン配合剤",
+      "korean": "슈도에페드린 함유",
+      "page": "https://eastandwell.com/medicines/loratadine-d/",
+      "pageZh": "https://eastandwell.com/zh/medicines/loratadine-d/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Check before you pack",
+          "rule": "Japan treats pseudoephedrine as a “stimulants’ raw material”. Products with 10% pseudoephedrine or less are excluded; above that you need permission before you travel. US labels don’t show the share.",
+          "whatToDo": "Ask your doctor or pharmacist for one without pseudoephedrine. Or ask Japan’s Narcotics Control Department about your exact product at least 14 days before you arrive.",
+          "sources": [
+            "ncdList",
+            "ncdGuide"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "Not checked yet",
+          "rule": "Loratadine and pseudoephedrine isn’t on China’s 2025 lists of controlled medicines, and we haven’t found an official rule for travellers.",
+          "whatToDo": "Ask the Chinese embassy or consulate near you before you pack it.",
+          "sources": [
+            "cnList"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cetirizine",
+      "brand": "Zyrtec",
+      "generic": "cetirizine",
+      "chinese": "西替利嗪",
+      "japanese": "セチリジン",
+      "korean": "세티리진",
+      "page": "https://eastandwell.com/medicines/cetirizine/",
+      "pageZh": "https://eastandwell.com/zh/medicines/cetirizine/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Non-prescription medicines: up to a two-month supply for your own use with no paperwork.",
+          "whatToDo": "More than two months’ supply needs an Import Confirmation before you leave home.",
+          "sources": [
+            "mhlwImport"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China allows medicines for your own use in a “reasonable quantity”, under customs supervision. There’s no set amount.",
+          "whatToDo": "Bring only what you need for the trip, with your prescription or medical record, and declare medicines to customs if asked.",
+          "sources": [
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cetirizine-d",
+      "brand": "Zyrtec-D",
+      "generic": "cetirizine and pseudoephedrine",
+      "chinese": "西替利嗪与伪麻黄碱",
+      "japanese": "プソイドエフェドリン配合剤",
+      "korean": "슈도에페드린 함유",
+      "page": "https://eastandwell.com/medicines/cetirizine-d/",
+      "pageZh": "https://eastandwell.com/zh/medicines/cetirizine-d/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Check before you pack",
+          "rule": "Japan treats pseudoephedrine as a “stimulants’ raw material”. Products with 10% pseudoephedrine or less are excluded; above that you need permission before you travel. US labels don’t show the share.",
+          "whatToDo": "Ask your doctor or pharmacist for one without pseudoephedrine. Or ask Japan’s Narcotics Control Department about your exact product at least 14 days before you arrive.",
+          "sources": [
+            "ncdList",
+            "ncdGuide"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "Not checked yet",
+          "rule": "Cetirizine and pseudoephedrine isn’t on China’s 2025 lists of controlled medicines, and we haven’t found an official rule for travellers.",
+          "whatToDo": "Ask the Chinese embassy or consulate near you before you pack it.",
+          "sources": [
+            "cnList"
+          ]
+        }
+      }
+    },
+    {
+      "id": "atorvastatin",
+      "brand": "Lipitor",
+      "generic": "atorvastatin",
+      "chinese": "阿托伐他汀",
+      "japanese": "アトルバスタチン",
+      "korean": "아토르바스타틴",
+      "page": "https://eastandwell.com/medicines/atorvastatin/",
+      "pageZh": "https://eastandwell.com/zh/medicines/atorvastatin/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Prescription medicines: you can bring up to a one-month supply for your own use with no paperwork.",
+          "whatToDo": "More than a month’s supply needs an Import Confirmation (Yunyu Kakunin-sho, once called “Yakkan Shoumei”) before you leave home. The US Embassy suggests carrying a copy of your prescription.",
+          "sources": [
+            "mhlwImport",
+            "usEmbTokyo"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China allows medicines for your own use in a “reasonable quantity”, under customs supervision. There’s no set amount.",
+          "whatToDo": "Bring only what you need for the trip, with your prescription or medical record, and declare medicines to customs if asked.",
+          "sources": [
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "apixaban",
+      "brand": "Eliquis",
+      "generic": "apixaban",
+      "chinese": "阿哌沙班",
+      "japanese": "アピキサバン",
+      "korean": "아픽사반",
+      "page": "https://eastandwell.com/medicines/apixaban/",
+      "pageZh": "https://eastandwell.com/zh/medicines/apixaban/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Prescription medicines: you can bring up to a one-month supply for your own use with no paperwork.",
+          "whatToDo": "More than a month’s supply needs an Import Confirmation (Yunyu Kakunin-sho, once called “Yakkan Shoumei”) before you leave home. The US Embassy suggests carrying a copy of your prescription.",
+          "sources": [
+            "mhlwImport",
+            "usEmbTokyo"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China allows medicines for your own use in a “reasonable quantity”, under customs supervision. There’s no set amount.",
+          "whatToDo": "Bring only what you need for the trip, with your prescription or medical record, and declare medicines to customs if asked.",
+          "sources": [
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "lisinopril",
+      "brand": "Zestril, Prinivil",
+      "generic": "lisinopril",
+      "chinese": "赖诺普利",
+      "japanese": "リシノプリル",
+      "korean": "리시노프릴",
+      "page": "https://eastandwell.com/medicines/lisinopril/",
+      "pageZh": "https://eastandwell.com/zh/medicines/lisinopril/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Prescription medicines: you can bring up to a one-month supply for your own use with no paperwork.",
+          "whatToDo": "More than a month’s supply needs an Import Confirmation (Yunyu Kakunin-sho, once called “Yakkan Shoumei”) before you leave home. The US Embassy suggests carrying a copy of your prescription.",
+          "sources": [
+            "mhlwImport",
+            "usEmbTokyo"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China allows medicines for your own use in a “reasonable quantity”, under customs supervision. There’s no set amount.",
+          "whatToDo": "Bring only what you need for the trip, with your prescription or medical record, and declare medicines to customs if asked.",
+          "sources": [
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "levothyroxine",
+      "brand": "Synthroid",
+      "generic": "levothyroxine",
+      "chinese": "左甲状腺素",
+      "japanese": "レボチロキシン",
+      "korean": "레보티록신",
+      "page": "https://eastandwell.com/medicines/levothyroxine/",
+      "pageZh": "https://eastandwell.com/zh/medicines/levothyroxine/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Prescription medicines: you can bring up to a one-month supply for your own use with no paperwork.",
+          "whatToDo": "More than a month’s supply needs an Import Confirmation (Yunyu Kakunin-sho, once called “Yakkan Shoumei”) before you leave home. The US Embassy suggests carrying a copy of your prescription.",
+          "sources": [
+            "mhlwImport",
+            "usEmbTokyo"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China allows medicines for your own use in a “reasonable quantity”, under customs supervision. There’s no set amount.",
+          "whatToDo": "Bring only what you need for the trip, with your prescription or medical record, and declare medicines to customs if asked.",
+          "sources": [
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "metformin",
+      "brand": "Glucophage",
+      "generic": "metformin",
+      "chinese": "二甲双胍",
+      "japanese": "メトホルミン",
+      "korean": "메트포르민",
+      "page": "https://eastandwell.com/medicines/metformin/",
+      "pageZh": "https://eastandwell.com/zh/medicines/metformin/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Prescription medicines: you can bring up to a one-month supply for your own use with no paperwork.",
+          "whatToDo": "More than a month’s supply needs an Import Confirmation (Yunyu Kakunin-sho, once called “Yakkan Shoumei”) before you leave home. The US Embassy suggests carrying a copy of your prescription.",
+          "sources": [
+            "mhlwImport",
+            "usEmbTokyo"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China allows medicines for your own use in a “reasonable quantity”, under customs supervision. There’s no set amount.",
+          "whatToDo": "Bring only what you need for the trip, with your prescription or medical record, and declare medicines to customs if asked.",
+          "sources": [
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "insulin",
+      "brand": "Insulin pens",
+      "generic": "insulin, with pen needles",
+      "chinese": "胰岛素（含针头）",
+      "japanese": "インスリン",
+      "korean": "인슐린",
+      "page": "https://eastandwell.com/medicines/insulin/",
+      "pageZh": "https://eastandwell.com/zh/medicines/insulin/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Within the limit",
+          "rule": "Injectable medicines in pre-filled syringes or self-injection kits, with their needles: up to a one-month supply with no paperwork.",
+          "whatToDo": "More than a month’s supply needs an Import Confirmation before you leave home.",
+          "sources": [
+            "mhlwImport"
+          ]
+        },
+        "korea": {
+          "label": "Within the limit",
+          "rule": "Ordinary medicines: up to 6 bottles or a 3-month supply. You must be able to show they’re for your own use: a prescription, a medical certificate or the pharmacy label.",
+          "whatToDo": "Keep them in the original packaging. You may be asked for a receipt.",
+          "sources": [
+            "krNotice",
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "No set amount",
+          "rule": "China allows medicines for your own use in a “reasonable quantity”, under customs supervision. There’s no set amount.",
+          "whatToDo": "Bring only what you need for the trip, with your prescription or medical record, and declare medicines to customs if asked.",
+          "sources": [
+            "cnFaq"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cbd",
+      "brand": "CBD products",
+      "generic": "cannabidiol (oils, gummies, creams)",
+      "chinese": "大麻二酚（油、软糖、乳霜）",
+      "japanese": "カンナビジオール",
+      "korean": "칸나비디올",
+      "page": "https://eastandwell.com/medicines/cbd/",
+      "pageZh": "https://eastandwell.com/zh/medicines/cbd/",
+      "japanLimitMg": null,
+      "rules": {
+        "japan": {
+          "label": "Check before you pack",
+          "rule": "Since 12 Dec 2024, a product is classed as a narcotic under Japanese law if its THC is over 10 ppm (oils and powders), 0.1 ppm (drinks and lotions) or 1 ppm (everything else). Japan’s health ministry won’t advise on individual products.",
+          "whatToDo": "Leave it at home unless the maker certifies its THC is below Japan’s limits.",
+          "sources": [
+            "mhlwThc"
+          ]
+        },
+        "korea": {
+          "label": "Not allowed",
+          "rule": "Korea says not to bring CBD, marijuana or hemp products, even on an airport layover, without written approval from the Korean government.",
+          "whatToDo": "Leave it at home.",
+          "sources": [
+            "usEmbSeoul"
+          ]
+        },
+        "china": {
+          "label": "Check before you pack",
+          "rule": "Marijuana is prohibited in China, and we haven’t found an official rule on CBD for travellers. Hong Kong has treated CBD as a dangerous drug since 1 Feb 2023.",
+          "whatToDo": "Leave it at home.",
+          "sources": [
+            "cnFaq",
+            "hkCbd"
+          ]
+        }
+      }
+    }
+  ]
+}

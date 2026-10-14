@@ -1,0 +1,38 @@
+# East&Well
+
+> Independent guides to health checkups abroad, starting in Asia (Seoul, Tokyo, Shanghai), and a free checker for bringing medicines into Japan, South Korea and mainland China. Every rule cites the government page it comes from, with the date it was checked.
+
+## Medicine checker
+
+- [Can I bring my medicine? (checker)](https://eastandwell.com/medicines/): trip-based plan with deadlines, from official rules
+- [Open data: every rule, source and date](https://eastandwell.com/medicines/data.json)
+- [Ativan (lorazepam)](https://eastandwell.com/medicines/lorazepam/): Japan: no permit needed up to 90 mg in total. South Korea: a permit from Korea’s drug regulator is needed, at least 10 working days before you arrive. China: a Category II controlled medicine: bring your prescription or a diagnosis certificate and declare it.
+- [Xanax (alprazolam)](https://eastandwell.com/medicines/alprazolam/): Japan: no permit needed up to 72 mg in total. South Korea: a permit from Korea’s drug regulator is needed, at least 10 working days before you arrive. China: a Category II controlled medicine: bring your prescription or a diagnosis certificate and declare it.
+- [Klonopin (clonazepam)](https://eastandwell.com/medicines/clonazepam/): Japan: no permit needed up to 180 mg in total. South Korea: a permit from Korea’s drug regulator is needed, at least 10 working days before you arrive. China: a Category II controlled medicine: bring your prescription or a diagnosis certificate and declare it.
+- [Valium (diazepam)](https://eastandwell.com/medicines/diazepam/): Japan: no permit needed up to 1.2 g in total. South Korea: a permit from Korea’s drug regulator is needed, at least 10 working days before you arrive. China: a Category II controlled medicine: bring your prescription or a diagnosis certificate and declare it.
+- [Ambien (zolpidem)](https://eastandwell.com/medicines/zolpidem/): Japan: no permit needed up to 300 mg in total. South Korea: a permit from Korea’s drug regulator is needed, at least 10 working days before you arrive. China: a Category II controlled medicine: bring your prescription or a diagnosis certificate and declare it.
+- [Ritalin, Concerta (methylphenidate)](https://eastandwell.com/medicines/methylphenidate/): Japan: no permit needed up to 2.16 g in total. South Korea: a permit from Korea’s drug regulator is needed, at least 10 working days before you arrive. China: a Category I controlled medicine: up to one prescription’s worth, with a certificate of diagnosis.
+- [Adderall (amphetamine salts)](https://eastandwell.com/medicines/amphetamine/): Japan: not allowed, even with a prescription. South Korea: a permit from Korea’s drug regulator is needed, at least 10 working days before you arrive. China: a Category I controlled medicine: up to one prescription’s worth, with a certificate of diagnosis.
+- [Vyvanse (lisdexamfetamine)](https://eastandwell.com/medicines/lisdexamfetamine/): Japan: a permit is needed, applied for at least 14 days before you arrive. South Korea: a permit from Korea’s drug regulator is needed, at least 10 working days before you arrive. China: not on China’s lists, and we haven’t found a rule for travellers.
+- [Tylenol with codeine (acetaminophen and codeine)](https://eastandwell.com/medicines/codeine-tablets/): Japan: a permit is needed unless the product has 1% codeine or less. South Korea: a permit from Korea’s drug regulator is needed, at least 10 working days before you arrive. China: a narcotic: up to one prescription’s worth, with a certificate of diagnosis.
+- [OxyContin, Percocet (oxycodone)](https://eastandwell.com/medicines/oxycodone/): Japan: a permit is needed, applied for at least 14 days before you arrive. South Korea: a permit from Korea’s drug regulator is needed, at least 10 working days before you arrive. China: a narcotic: up to one prescription’s worth, with a certificate of diagnosis.
+- [Ultram (tramadol)](https://eastandwell.com/medicines/tramadol/): Japan: up to a one-month supply with no paperwork. South Korea: up to 6 bottles or a 3-month supply. China: a Category II controlled medicine: bring your prescription or a diagnosis certificate and declare it.
+- [Tylenol (acetaminophen)](https://eastandwell.com/medicines/acetaminophen/): Japan: up to a two-month supply with no paperwork. South Korea: up to 6 bottles or a 3-month supply. China: a “reasonable quantity” for your own use.
+- [Sudafed (pseudoephedrine)](https://eastandwell.com/medicines/pseudoephedrine/): Japan: it depends on the product: over 10% pseudoephedrine needs a permit. South Korea: up to 6 bottles or a 3-month supply. China: not on China’s lists, and we haven’t found a rule for travellers.
+- [Claritin (loratadine)](https://eastandwell.com/medicines/loratadine/): Japan: up to a two-month supply with no paperwork. South Korea: up to 6 bottles or a 3-month supply. China: a “reasonable quantity” for your own use.
+- [Claritin-D (loratadine and pseudoephedrine)](https://eastandwell.com/medicines/loratadine-d/): Japan: it depends on the product: over 10% pseudoephedrine needs a permit. South Korea: up to 6 bottles or a 3-month supply. China: not on China’s lists, and we haven’t found a rule for travellers.
+- [Zyrtec (cetirizine)](https://eastandwell.com/medicines/cetirizine/): Japan: up to a two-month supply with no paperwork. South Korea: up to 6 bottles or a 3-month supply. China: a “reasonable quantity” for your own use.
+- [Zyrtec-D (cetirizine and pseudoephedrine)](https://eastandwell.com/medicines/cetirizine-d/): Japan: it depends on the product: over 10% pseudoephedrine needs a permit. South Korea: up to 6 bottles or a 3-month supply. China: not on China’s lists, and we haven’t found a rule for travellers.
+- [Lipitor (atorvastatin)](https://eastandwell.com/medicines/atorvastatin/): Japan: up to a one-month supply with no paperwork. South Korea: up to 6 bottles or a 3-month supply. China: a “reasonable quantity” for your own use.
+- [Eliquis (apixaban)](https://eastandwell.com/medicines/apixaban/): Japan: up to a one-month supply with no paperwork. South Korea: up to 6 bottles or a 3-month supply. China: a “reasonable quantity” for your own use.
+- [Zestril, Prinivil (lisinopril)](https://eastandwell.com/medicines/lisinopril/): Japan: up to a one-month supply with no paperwork. South Korea: up to 6 bottles or a 3-month supply. China: a “reasonable quantity” for your own use.
+- [Synthroid (levothyroxine)](https://eastandwell.com/medicines/levothyroxine/): Japan: up to a one-month supply with no paperwork. South Korea: up to 6 bottles or a 3-month supply. China: a “reasonable quantity” for your own use.
+- [Glucophage (metformin)](https://eastandwell.com/medicines/metformin/): Japan: up to a one-month supply with no paperwork. South Korea: up to 6 bottles or a 3-month supply. China: a “reasonable quantity” for your own use.
+- [Insulin pens (insulin, with pen needles)](https://eastandwell.com/medicines/insulin/): Japan: up to a one-month supply of pens or self-injection kits, with no paperwork. South Korea: up to 6 bottles or a 3-month supply. China: a “reasonable quantity” for your own use.
+- [CBD products (cannabidiol (oils, gummies, creams))](https://eastandwell.com/medicines/cbd/): Japan: classed as a narcotic if its THC is over Japan’s limits, so leave it at home. South Korea: don’t bring it without written approval, even on a layover. China: leave it at home.
+
+## Other
+
+- [Journal of guides](https://eastandwell.com/journal/)
+- [Editorial standards](https://eastandwell.com/editorial-standards/)
+- [中文版](https://eastandwell.com/zh/)
